@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOBBS | Photo</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=BioRhyme:wght@300&display=swap");
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Arizonia&display=swap");
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="body_photo">
+    <h2>Capturing &nbsp; The &nbsp; Moment</h2>
+    <div class="layout">
+      <div class="trendPhoto">
+        <div class="overlayPhoto">
+          <div class="textPhoto">
+            Wanna see more from this photographer?
+            <a href="https://www.instagram.com/aniruddh.gs/">Click here</a>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <form id="likes">
+          <div class="like_dislike">
+            <button class="like_btn" onclick="like()">💓</button>
+            <div class="no_likes"><p class="display_likes"></p></div>
+            <button class="dislike_btn" onclick="dislike()">💔</button>
+            <div class="no_dislikes"><p class="display_dislikes"></p></div>
+          </div>
+        </form>
+        <div class="description">
+          Look into the eyes of the beast👀 Photographed using the Nikon D500
+          with Sigma Sport at Bandipur, Karnataka
+          <p style="font-style: italic">By : Aniruddh G S</p>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <!-- Code for inserting data into database -->
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+
+  <!-- Package responsible for retreiving data -->
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js"></script>
+
+  <script src="firebaseConfig.js"></script>
+  <script type="text/javascript" src="photo.js"></script>
+</html>

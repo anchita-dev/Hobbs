@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOBBS | Home</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="overlay">
+        <p id="display"></p>
+        <button onclick="logout()">
+          <img
+            src="images/signout.png"
+            alt="login icon"
+            width="40px;"
+            height="40px;"
+            id="logout_icon"
+          />Signout
+        </button>
+        <div class="text">HOBBS</div>
+      </div>
+    </div>
+
+    <div id="registrationModal" class="mymodal">
+      <div id="msgAndButtons" class="modalcontent">
+        <span class="close" id="regClose">&times;</span>
+        <h2 id="heading">SIGN UP</h2>
+        <div class="form_details_reg">
+          <label class="labels">User ID:</label>
+          <input
+            type="text"
+            name=""
+            id="userID"
+            placeholder="Enter your User ID"
+            class="input_regs"
+          />
+        </div>
+
+        <div class="form_details_reg">
+          <label class="labels">Create Your Password:</label>
+          <input
+            type="password"
+            name=""
+            id="signup_pw"
+            placeholder="Enter your password"
+            class="input_regs"
+            required
+          />
+        </div>
+
+        <div class="form_details_reg">
+          <label class="labels">Confirm Password:</label>
+          <input
+            type="password"
+            name=""
+            id="signup_pw_confirm"
+            placeholder="Confirm your password"
+            class="input_regs"
+            required
+          />
+        </div>
+
+        <button id="signin_btn" onclick="signup()">REGISTER</button>
+      </div>
+    </div>
+
+    <div id="loginModal" class="mymodal">
+      <div id="msgAndButtons" class="modalcontent">
+        <span class="close" id="logClose">&times;</span>
+        <h2 id="heading">LOGIN</h2>
+
+        <div class="form_details_reg">
+          <label class="labels">User ID:</label>
+          <input
+            type="text"
+            name=""
+            id="login_userID"
+            placeholder="Enter your User ID"
+            class="input_regs"
+          />
+        </div>
+
+        <div class="form_details_reg">
+          <label class="labels">Password:</label>
+          <input
+            type="password"
+            name=""
+            id="login_pw"
+            placeholder="Enter your password"
+            class="input_regs"
+            required
+          />
+        </div>
+
+        <button id="signin_btn" onclick="saveAndNext()">LOGIN</button>
+
+        <div class="form_details_reg">
+          <label class="labels">New here?</label>
+          <button onclick="registerBtn()">Create Account</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="verificationModal" class="mymodal">
+      <div id="msgAndButtons" class="modalcontent">
+        <h2 id="heading">VERIFICATION</h2>
+        <button id="signin_btn" onclick="sendemail()">SEND E-mail</button>
+        <label class="labels"
+          >Once you have verified, please refresh the page</label
+        >
+      </div>
+    </div>
+
+    <div class="top_row">
+      <div class="travel">
+        <a href="travel.html"
+          ><img
+            class="image img-responsive"
+            src="images/bus.jpg"
+            alt="yellow bus on a road"
+        /></a>
+        <a href="travel.html"> <p>Travel & advenutures</p></a>
+      </div>
+      <div class="food">
+        <a href="food.html"
+          ><img
+            class="image img-responsive"
+            src="images/pancake.jpg"
+            alt="honey pouring on pancake"
+        /></a>
+        <a href="food.html"> <p>For foodies</p></a>
+      </div>
+      <div class="painting">
+        <a href="painting.html"
+          ><img
+            class="image img-responsive"
+            src="images/uncle.jpg"
+            alt="man painting monument"
+        /></a>
+        <a href="painting.html"> <p>Artists' arena</p></a>
+      </div>
+    </div>
+
+    <div class="bottom_row">
+      <div class="photography">
+        <a href="photo.html"
+          ><img
+            class="image img-responsive"
+            src="images/cam.jpg"
+            alt="man clicking picture on his DSLR"
+        /></a>
+        <a href="photo.html"> <p>Capturing the moment</p></a>
+      </div>
+      <div class="game">
+        <a href="game.html"
+          ><img
+            class="image img-responsive"
+            src="images/xbox.jpg"
+            alt="boy playing using his Xbox"
+        /></a>
+        <a href="game.html"> <p>Gaming arcade</p></a>
+      </div>
+      <div class="reading">
+        <a href="read.html"
+          ><img
+            class="image img-responsive"
+            src="images/books.jpg"
+            alt="man reading"
+        /></a>
+        <a href="read.html"> <p>Have you chosen a good book?</p></a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <a href="about.html">About</a>
+    </div>
+  </body>
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script src="firebaseConfig.js"></script>
+  <script>
+    const auth = firebase.auth();
+    // Find out the active user
+    auth.onAuthStateChanged(function (user) {
+      if (user) {
+        var user = firebase.auth().currentUser;
+        var id = user.email; // Active Email-ID of user
+        document.getElementById("display").innerHTML = "Welcome" + id;
+      } else {
+        document.getElementById("loginModal").style.display = "none";
+      }
+    });
+
+    function logout() {
+      auth.signOut();
+      // Destroy the current page
+      // Most browsers prevent you from closing windows with javascript that were not opened
+      // with window.open("https://example_url.com") however, it is still possible to close
+      //  the current window using the following command:
+      window.open("index.html");
+      // This loads a blank url (the first argument) in the current window (the second argument)
+      // and then instantaneously closes the window. This works because when close() is called,
+      // the current window (current blank URL) has been opened by javascript.
+    }
+  </script>
+</html>

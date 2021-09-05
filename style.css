@@ -1,0 +1,621 @@
+.mymodal {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 140px;
+  padding-left: 300px;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.modalcontent {
+  position: fixed;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+  /* padding: 20px; */
+  border: 2px solid white;
+  width: 40%;
+  height: 320px;
+  margin: auto;
+  margin-left: 70px;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.modalcontent h2 {
+  margin: 20px 0px;
+  font-size: 50px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.modalcontent button {
+  background-color: inherit;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.close {
+  color: whitesmoke;
+  font-size: 40px;
+  font-weight: bold;
+  float: right;
+  margin: 10px;
+}
+
+.labels {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.input_regs {
+  border: none;
+  padding: 6px 10px;
+  text-align: center;
+  border-radius: 5px;
+  float: right;
+  margin-right: 50px;
+  color: black;
+}
+
+.form_details_reg {
+  margin: 12px;
+}
+
+.overlay button {
+  border: none;
+  background-color: white;
+  float: right;
+  margin: 28px;
+  font-size: 20px;
+}
+.footer {
+  background-color: black;
+  height: 70px;
+  width: 100%;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+  float: right;
+  margin-right: 20px;
+}
+
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.9);
+}
+
+.container {
+  background: url("images/camera.jpg") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 577px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.208);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 90px;
+  position: absolute;
+  font-weight: bold;
+  font-family: "Dancing Script", cursive;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.top_row {
+  display: flex;
+}
+
+.bottom_row {
+  display: flex;
+}
+
+.travel p,
+.food p,
+.painting p {
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 30px;
+  font-weight: 800;
+  margin-top: 20px;
+}
+
+.photography p,
+.game p,
+.reading p {
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 30px;
+  font-weight: 800;
+  margin-top: 20px;
+}
+
+.travel,
+.food,
+.painting,
+.photography,
+.game,
+.reading {
+  margin: 30px 60px;
+}
+
+.travel a,
+.food a,
+.painting a,
+.photography a,
+.game a,
+.reading a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Travel.html specific styles */
+.body_travel {
+  background: url("images/travel_bg.jpg") no-repeat center;
+  background-size: cover;
+  backdrop-filter: blur(3px);
+  width: 99%;
+  height: 100%;
+  margin: 4px;
+  padding: 4px;
+}
+
+.layout {
+  border: 2px solid rgba(238, 234, 234, 0.918);
+  background-color: white;
+  box-shadow: 7px 7px 14px black;
+  border-radius: 10px;
+  margin: 30px auto;
+  width: 58%;
+}
+
+.trendTravel {
+  position: relative;
+  margin-top: 40px;
+  background: url("images/pondi.jpg") no-repeat center;
+  background-size: cover;
+  width: 80%;
+  height: 400px;
+  margin-left: 77px;
+}
+
+.overlayTravel {
+  position: inherit;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.208);
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: 0.5s ease;
+}
+
+.trendTravel:hover .overlayTravel {
+  width: 100%;
+}
+
+.textTravel {
+  color: white;
+  font-size: 27px;
+  position: absolute;
+  /* font-family: "Dancing Script", cursive; */
+  top: 48%;
+  left: 50%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.textTravel a {
+  color: white;
+}
+
+.content {
+  display: flex;
+  margin-left: 60px;
+}
+
+.like_dislike {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  margin-top: 30px;
+}
+
+.like_btn,
+.dislike_btn {
+  background-color: white;
+  border: none;
+  font-size: 25px;
+  margin: 15px;
+}
+
+.like_btn:hover {
+  cursor: pointer;
+}
+
+.dislike_btn:hover {
+  cursor: pointer;
+}
+
+/* .like_btn:disabled {
+  color: -internal-light-dark(none);
+}
+
+.dislike_btn:disabled {
+  color: -internal-light-dark(none);
+} */
+
+.animate__bounce {
+  -webkit-animation-duration: 300ms;
+  -moz-animation-duration: 300ms;
+  animation-duration: 300ms;
+  /* -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; */
+  transform: translateY(-15px);
+}
+
+.no_likes p {
+  margin-left: 33px;
+  margin-top: 0px;
+  font-weight: 600;
+  font-family: "BioRhyme", serif;
+}
+
+.no_dislikes p {
+  margin-left: 33px;
+  margin-top: 0px;
+  font-weight: 600;
+  font-family: "BioRhyme", serif;
+}
+
+.description {
+  width: 70%;
+  margin: 25px;
+  font-family: "BioRhyme", serif;
+  font-size: 18px;
+  font-weight: 900px;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 70px;
+  font-weight: 500px;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* Food.html specific styles */
+
+.trendFood {
+  position: relative;
+  margin-top: 40px;
+  background: url("images/halwaa.jpg") no-repeat center;
+  background-size: cover;
+  width: 80%;
+  height: 400px;
+  margin-left: 77px;
+}
+
+.overlayFood {
+  position: inherit;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.208);
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: 0.5s ease;
+}
+
+.trendFood:hover .overlayFood {
+  width: 100%;
+}
+
+.textFood {
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  /* font-family: "Dancing Script", cursive; */
+  top: 45%;
+  left: 50%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.textFood a {
+  color: white;
+}
+
+.body_food {
+  background: url("images/food_bg.jpg") no-repeat center;
+  background-size: cover;
+  backdrop-filter: blur(2px);
+  width: 99%;
+  height: 100%;
+  margin: 4px;
+  padding: 4px;
+}
+
+/* Painting.html specific styles */
+
+.body_paint {
+  background: url("images/ladyy.jpg") no-repeat center;
+  background-size: cover;
+  backdrop-filter: blur(3px);
+  width: 99%;
+  height: 100%;
+  margin: 4px;
+  padding: 4px;
+}
+
+.trendPaint {
+  position: relative;
+  margin-top: 40px;
+  background: url("images/ladyy.jpg") no-repeat center;
+  background-size: cover;
+  width: 80%;
+  height: 400px;
+  margin-left: 77px;
+}
+
+.overlayPaint {
+  position: inherit;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.208);
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: 0.5s ease;
+}
+
+.trendPaint:hover .overlayPaint {
+  width: 100%;
+}
+
+.textPaint {
+  color: white;
+  font-size: 28px;
+  position: absolute;
+  /* font-family: "Dancing Script", cursive; */
+  top: 51%;
+  left: 50%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.textPaint a {
+  color: white;
+}
+
+/* Game.html specific styles */
+
+.trendGame {
+  position: relative;
+  margin-top: 40px;
+  background: url("images/cyber.jpg") no-repeat center;
+  background-size: cover;
+  width: 80%;
+  height: 400px;
+  margin-left: 77px;
+}
+
+.overlayGame {
+  position: inherit;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.208);
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: 0.5s ease;
+}
+
+.trendGame:hover .overlayGame {
+  width: 100%;
+}
+
+.textGame {
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  /* font-family: "Dancing Script", cursive; */
+  top: 65%;
+  left: 50%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.textGame a {
+  color: white;
+}
+
+.body_game {
+  background: url("images/game_bg.jpg") no-repeat center;
+  background-size: cover;
+  backdrop-filter: blur(2px);
+  width: 99%;
+  height: 100%;
+  margin: 4px;
+  padding: 4px;
+}
+/* Read.html specific styles */
+
+.trendRead {
+  position: relative;
+  margin-top: 40px;
+  background: url("images/books.png") no-repeat center;
+  background-size: cover;
+  width: 80%;
+  height: 400px;
+  margin-left: 77px;
+}
+
+.overlayRead {
+  position: inherit;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.208);
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: 0.5s ease;
+}
+
+.trendRead:hover .overlayRead {
+  width: 100%;
+}
+
+.textRead {
+  color: white;
+  font-size: 22px;
+  position: absolute;
+  /* font-family: "Dancing Script", cursive; */
+  top: 48%;
+  left: 50%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.textRead a {
+  color: white;
+}
+
+.body_read {
+  background: url("images/books_bg.jpg") no-repeat center;
+  background-size: cover;
+  width: 99%;
+  height: 100%;
+  margin: 4px;
+  padding: 4px;
+}
+/* Photo.html specific styles */
+
+.trendPhoto {
+  position: relative;
+  margin-top: 40px;
+  background: url("images/tigerr.jpg") no-repeat center;
+  background-size: cover;
+  width: 80%;
+  height: 400px;
+  margin-left: 77px;
+}
+
+.overlayPhoto {
+  position: inherit;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.208);
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: 0.5s ease;
+}
+
+.trendPhoto:hover .overlayPhoto {
+  width: 100%;
+}
+
+.textPhoto {
+  color: white;
+  font-size: 22px;
+  position: absolute;
+  /* font-family: "Dancing Script", cursive; */
+  top: 50%;
+  left: 50%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.textPhoto a {
+  color: white;
+}
+
+.body_photo {
+  background: url("images/photo__bg.jfif") no-repeat center;
+  background-size: cover;
+  backdrop-filter: blur(1px);
+  margin-left: 0px;
+  margin-top: 0px;
+  width: 99%;
+  height: 100%;
+  margin: 4px;
+  padding: 4px;
+}

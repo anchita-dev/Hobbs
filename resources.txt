@@ -1,0 +1,7 @@
+Background image setting - https://www.bitdegree.org/learn/responsive-image
+Footer designs with code - https://freefrontend.com/bootstrap-footers/
+Styling chrome scrollbar - https://stackoverflow.com/questions/17480087/styling-scrollbar-for-google-chrome-browser
+To make background image blur - https://www.w3schools.com/howto/howto_css_blurred_background.asp
+To make background image blur - https://blog.prototypr.io/how-to-make-a-background-blur-in-css-with-one-line-of-code-e446c7236e60
+Pondicherry link - https://www.thrillophilia.com/places-to-visit-in-pondicherry
+Gajar halwa link - https://www.vegrecipesofindia.com/gajar-halwa-recipe-gajar-ka-halwa/
